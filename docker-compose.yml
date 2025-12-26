@@ -17,7 +17,7 @@ services:
         soft: 262144
         hard: 262144
 
-  s3-reverse-proxy:
+  piyush891/s3-reverse-proxy:
     image: s3-reverse-proxy
     container_name: s3-reverse-proxy
     ports:
@@ -25,7 +25,7 @@ services:
     env_file:
       - ./s3-reverse-proxy/.env
 
-  api-server:
+  piyush891/api-server:
     image: api-server
     depends_on:
       - clickhouse
